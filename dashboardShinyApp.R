@@ -12,6 +12,9 @@ library(readxl)
 
 # Setup -------------------------------------------------------------------
 
+stopifnot(dir.exists("input"))
+stopifnot(dir.exists("input/demandaRealBalanceEnero"))
+
 #! 01 - Estimación de la Demanda Real del Sistema - Por Balance
 df <- read.csv("input/DemandaRealBalance.csv", skip = 8)
 drbSistema <- df[which.max(df[,8]),1]
