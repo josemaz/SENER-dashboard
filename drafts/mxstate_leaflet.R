@@ -1,0 +1,18 @@
+library(mxmaps)
+library(leaflet) # for colorNumeric
+library(scales) # needed for comma
+
+df_mxstate_2020$value <- df_mxstate_2020$afromexican / df_mxstate_2020$pop
+pal <- colorNumeric("Blues", domain = df_mxstate_2020$value)
+mxstate_leaflet(df_mxstate_2020,
+                pal,
+                ~ pal(value),
+                ~ sprintf("State: %s<br/>Percent Afro-Mexican: %s",
+                          state_name, comma(value))) %>%
+  addLegend(position = "bottomright", 
+            pal = pal, 
+            values = df_mxstate_2020$value,
+            title = "Percent<br>Afro-Mexican",
+            labFormat = labelFormat(suffix = "%",
+                                    transform = function(x) {100 * x})) %>%
+  addProviderTiles("CartoDB.Positron")
