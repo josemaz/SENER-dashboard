@@ -1,5 +1,5 @@
 # SENER-dashboard
-This repository is a Shiny App that deploys a dashboard with an energy data resume. Remember, this is **only** a dummy.
+This repository is a Shiny App that deploys a dashboard with an energy data resume provided by the SENER (Secretaría de Energía of México) . Remember, this is **only** a dummy.
 
 If you want better results, use Linux.
 
