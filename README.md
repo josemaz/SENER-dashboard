@@ -3,7 +3,7 @@ This repository is a Shiny App that deploys a dashboard with an energy data resu
 
 If you want better results, use Linux.
 
-We recommend you use RStudio to test through every step in the source code.
+I recommend you use RStudio to test through every step in the source code.
 
 ## Uncompress input data 
 
